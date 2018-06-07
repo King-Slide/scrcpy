@@ -86,6 +86,10 @@ static SDL_bool convert_keycode(SDL_Keycode from, enum android_keycode *to) {
         MAP(SDLK_LEFT,         AKEYCODE_DPAD_LEFT);
         MAP(SDLK_DOWN,         AKEYCODE_DPAD_DOWN);
         MAP(SDLK_UP,           AKEYCODE_DPAD_UP);
+        MAP(SDLK_w,            AKEYCODE_W);
+        MAP(SDLK_a,            AKEYCODE_A);
+        MAP(SDLK_s,            AKEYCODE_S);
+        MAP(SDLK_d,            AKEYCODE_D);
         FAIL;
     }
 }
