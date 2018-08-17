@@ -19,7 +19,7 @@ src = [
     'src/tinyxpm.c',
 ]
 
-if not meson.is_cross_build()
+if not get_option('crossbuild_windows')
 
     # native build
     dependencies = [
@@ -85,7 +85,7 @@ conf = configuration_data()
 conf.set('BUILD_DEBUG', get_option('buildtype') == 'debug')
 
 # the version, updated on release
-conf.set_quoted('SCRCPY_VERSION', '1.2')
+conf.set_quoted('SCRCPY_VERSION', '1.3')
 
 # the prefix used during configuration (meson --prefix=PREFIX)
 conf.set_quoted('PREFIX', get_option('prefix'))
