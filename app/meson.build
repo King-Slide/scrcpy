@@ -61,9 +61,9 @@ else
     )
 
     dependencies = [
+        cc.find_library('mingw32'),
         ffmpeg,
         sdl2,
-        cc.find_library('mingw32')
     ]
 
 endif
