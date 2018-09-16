@@ -92,6 +92,26 @@ static SDL_bool convert_keycode(SDL_Keycode from, enum android_keycode *to, Uint
     }
     // if ALT and META are not pressed, also handle letters and space
     switch (from) {
+        MAP(SDLK_1,            AKEYCODE_1);
+        MAP(SDLK_2,            AKEYCODE_2);
+        MAP(SDLK_3,            AKEYCODE_3);
+        MAP(SDLK_4,            AKEYCODE_4);
+        MAP(SDLK_5,            AKEYCODE_5);
+        MAP(SDLK_6,            AKEYCODE_6);
+        MAP(SDLK_7,            AKEYCODE_7);
+        MAP(SDLK_8,            AKEYCODE_8);
+        MAP(SDLK_9,            AKEYCODE_9);
+        MAP(SDLK_0,            AKEYCODE_0);
+        MAP(SDLK_KP_1,         AKEYCODE_NUMPAD_1);
+        MAP(SDLK_KP_2,         AKEYCODE_NUMPAD_2);
+        MAP(SDLK_KP_3,         AKEYCODE_NUMPAD_3);
+        MAP(SDLK_KP_4,         AKEYCODE_NUMPAD_4);
+        MAP(SDLK_KP_5,         AKEYCODE_NUMPAD_5);
+        MAP(SDLK_KP_6,         AKEYCODE_NUMPAD_6);
+        MAP(SDLK_KP_7,         AKEYCODE_NUMPAD_7);
+        MAP(SDLK_KP_8,         AKEYCODE_NUMPAD_8);
+        MAP(SDLK_KP_9,         AKEYCODE_NUMPAD_9);
+        MAP(SDLK_KP_0,         AKEYCODE_0);
         MAP(SDLK_a,            AKEYCODE_A);
         MAP(SDLK_b,            AKEYCODE_B);
         MAP(SDLK_c,            AKEYCODE_C);

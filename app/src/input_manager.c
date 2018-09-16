@@ -131,9 +131,9 @@ static void clipboard_paste(struct controller *controller) {
 void input_manager_process_text_input(struct input_manager *input_manager,
                                       const SDL_TextInputEvent *event) {
     char c = event->text[0];
-    if (isalpha(c) || c == ' ') {
+    if (isalnum(c) || c == ' ') {
         SDL_assert(event->text[1] == '\0');
-        // letters and space are handled as raw key event
+        // letters, numbers and space are handled as raw key event
         return;
     }
     struct control_event control_event;
@@ -226,6 +226,23 @@ void input_manager_process_key(struct input_manager *input_manager,
         }
 
         return;
+    }
+
+    if (event->keysym.mod & (KMOD_LSHIFT | KMOD_RSHIFT)) {
+        // shift + numbers shouldn't be handled like raw_key_events in hybrid mode
+        switch (event->keysym.sym) {
+            case SDLK_1:
+            case SDLK_2:
+            case SDLK_3:
+            case SDLK_4:
+            case SDLK_5:
+            case SDLK_6:
+            case SDLK_7:
+            case SDLK_8:
+            case SDLK_9:
+            case SDLK_0:
+                return;
+        }
     }
 
     struct control_event control_event;
