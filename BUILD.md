@@ -51,6 +51,15 @@ sudo apt install make gcc pkg-config meson \
 sudo apt install openjdk-8-jdk
 ```
 
+On old versions (like Ubuntu 16.04), `meson` is too old. In that case, install
+it from `pip3`:
+
+```bash
+sudo apt install python3-pip
+pip3 install meson
+```
+
+
 #### Fedora
 
 ```bash
@@ -219,10 +228,10 @@ You can then [run](README.md#run) _scrcpy_.
 
 ## Prebuilt server
 
- - [`scrcpy-server-v1.4.jar`][direct-scrcpy-server]  
-   _(SHA-256: 1ff7a72fcfe81dadccfab9d6f86c971cd7c7f38f17196748fe05480e301b443d)_
+ - [`scrcpy-server-v1.5.jar`][direct-scrcpy-server]  
+   _(SHA-256: d97aab6f60294e33e7ff79c2856ad3e01f912892395131f4f337e9ece03c24de)_
 
-[direct-scrcpy-server]: https://github.com/Genymobile/scrcpy/releases/download/v1.4/scrcpy-server-v1.4.jar
+[direct-scrcpy-server]: https://github.com/Genymobile/scrcpy/releases/download/v1.5-fixversion/scrcpy-server-v1.5.jar
 
 Download the prebuilt server somewhere, and specify its path during the Meson
 configuration:
