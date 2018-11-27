@@ -43,7 +43,7 @@ Install the required packages from your package manager.
 sudo apt install ffmpeg libsdl2-2.0.0
 
 # client build dependencies
-sudo apt install make gcc pkg-config meson \
+sudo apt install make gcc pkg-config meson ninja-build \
                  libavcodec-dev libavformat-dev libavutil-dev \
                  libsdl2-dev
 
@@ -198,6 +198,12 @@ meson x --buildtype release --strip -Db_lto=true
 cd x
 ninja
 ```
+
+_Note: `ninja` [must][ninja-user] be run as a non-root user (only `ninja
+install` must be run as root)._
+
+[ninja-user]: https://github.com/Genymobile/scrcpy/commit/4c49b27e9f6be02b8e63b508b60535426bd0291a
+
 
 ### Run
 

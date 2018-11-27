@@ -15,6 +15,11 @@ Make sure you [enabled adb debugging][enable-adb] on your device(s).
 
 [enable-adb]: https://developer.android.com/studio/command-line/adb.html#Enabling
 
+On some devices, you also need to enable [an additional option][control] to
+control it using keyboard and mouse.
+
+[control]: https://github.com/Genymobile/scrcpy/issues/70#issuecomment-373286323
+
 
 ## Get the app
 
@@ -208,6 +213,22 @@ scrcpy -t
 Note that it only shows _physical_ touches (with the finger on the device).
 
 
+### Install APK
+
+To install an APK, drag & drop an APK file (ending with `.apk`) to the _scrcpy_
+window.
+
+There is no visual feedback, a log is printed to the console.
+
+
+### Push file to device
+
+To push a file to `/sdcard/` on the device, drag & drop a (non-APK) file to the
+_scrcpy_ window.
+
+There is no visual feedback, a log is printed to the console.
+
+
 ### Forward audio
 
 Audio is not forwarded by _scrcpy_.
@@ -238,8 +259,6 @@ you are interested, see [issue 14].
  | turn screen on                         | _Right-click²_                |
  | paste computer clipboard to device     | `Ctrl`+`v`                    |
  | enable/disable FPS counter (on stdout) | `Ctrl`+`i`                    |
- | install APK from computer              | drag & drop APK file          |
- | push file to `/sdcard/`                | drag & drop non-APK file      |
 
 _¹Double-click on black borders to remove them._  
 _²Right-click turns the screen on if it was off, presses BACK otherwise._
